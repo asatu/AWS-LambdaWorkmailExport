@@ -2,7 +2,7 @@
 Esportare Caselle di Posta da Amazon WorkMail a Amazon S3 tramite Lambda
 
 
-## Passo 1: Creare un ruolo IAM
+## Passo 1: Creare una policy IAM
 
 1. Accedi alla Console AWS e vai alla sezione IAM (Identity and Access Management).
 2. Nella barra laterale sinistra, seleziona "Policies" e poi clicca su "Create policy".
@@ -19,6 +19,15 @@ Esportare Caselle di Posta da Amazon WorkMail a Amazon S3 tramite Lambda
 5. Dopo aver creato il ruolo, modifica la Trust Relationships incollando il contenuto del file "TrustRelationships.json"
 6. Prendi nota dell'ARN del ruolo.
 
+## Passo 2: Creare una chiave KMS per il Bucket S3
+
+1. Vai alla sezione KMS (Key Management Service) nella Console AWS.
+2. Clicca su "Create key".
+3. Seleziona "Symmetric" come tipo di chiave e scegli un alias e una descrizione (opzionale).
+4. Scegli il ruolo IAM creato nel Passo 2 come "Key Users" e clicca su "Next".
+5. Configura le autorizzazioni come necessario e clicca su "Next".
+6. Rivedi le impostazioni e clicca su "Finish" per creare la chiave.
+
 ## Passo 3: Creare un bucket S3
 
 1. Vai alla sezione S3 della Console AWS.
@@ -34,15 +43,13 @@ Esportare Caselle di Posta da Amazon WorkMail a Amazon S3 tramite Lambda
 5. Clicca su "Create function".
 6. Assicurati che il ruolo sia attaccato correttamente.
 7. Prolunga il tempo di esecuzione della funzione al massimo (15min)
-8. Assicurati che l'Handler sia giusto
-<img width="592" alt="image" src="https://github.com/asatu/AWS-LambdaWorkmailExport/assets/13770039/750d7f70-2e2f-457f-8cf6-56db6148f9c4">
-
 
 ## Passo 5: Scrivere e caricare il codice Lambda
 
 1. Nella pagina della funzione Lambda, vai alla sezione "Function code".
 2. Incolla il codice Python incollando il contenuto del file "lambda_function.py".
-3. Clicca su "Deploy" per salvare il codice.
+3. Modificare tutti i parametri generici con i nomi e le arn delle risorse che hai creato.
+4. Clicca su "Deploy" per salvare il codice.
 
 ## Passo 6: Configurare gli eventi di Lambda
 

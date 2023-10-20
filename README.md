@@ -63,6 +63,8 @@ Esportare Caselle di Posta da Amazon WorkMail a Amazon S3 tramite Lambda
 
 1. Nella pagina della funzione Lambda, clicca su "Test".
 2. Seleziona o crea un nuovo evento di test e clicca su "Test" per eseguire la funzione.
+3. Se tutto va a buon fine, vedrai "COMPLETATED" nei log del test e nel Bucket 2 nuovi file: .zip e .log.
+4. ATTENZIONE: l'export della casella di posta può essere eseguita solo una volta al giorno.
 
 ## Passo 8: Monitorare e risolvere i problemi
 

@@ -1,6 +1,7 @@
 # AWS-LambdaWorkmailExport - Riccardo Scudieri: 
 Esportare Caselle di Posta da Amazon WorkMail a Amazon S3 tramite Lambda
 
+
 ## Passo 1: Creare un ruolo IAM
 
 1. Accedi alla Console AWS e vai alla sezione IAM (Identity and Access Management).

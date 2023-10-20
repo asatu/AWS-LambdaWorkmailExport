@@ -32,6 +32,11 @@ Esportare Caselle di Posta da Amazon WorkMail a Amazon S3 tramite Lambda
 3. Assegna un nome alla funzione e seleziona il runtime Python 3.x.
 4. Seleziona il ruolo IAM creato nel Passo 1 dalla lista "Existing role".
 5. Clicca su "Create function".
+6. Assicurati che il ruolo sia attaccato correttamente.
+7. Prolunga il tempo di esecuzione della funzione al massimo (15min)
+8. Assicurati che l'Handler sia giusto
+<img width="592" alt="image" src="https://github.com/asatu/AWS-LambdaWorkmailExport/assets/13770039/750d7f70-2e2f-457f-8cf6-56db6148f9c4">
+
 
 ## Passo 5: Scrivere e caricare il codice Lambda
 

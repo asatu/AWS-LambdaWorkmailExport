@@ -1,4 +1,4 @@
-# AWS-LambdaWorkmailExport - Riccardo Scudieri: 
+# AWS-LambdaWorkmailExport - Riccardo Scudieri
 Esportare Caselle di Posta da Amazon WorkMail a Amazon S3 tramite Lambda
 
 

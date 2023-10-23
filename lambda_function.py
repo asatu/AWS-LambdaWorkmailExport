@@ -46,7 +46,7 @@ def export_mailbox(user_id, s3_prefix):
             job_state = response['State']
             print(job_state)
             print(response)
-            if job_state in ['COMPLETE', 'FAILED', 'CANCELLED']:
+            if job_state in ['COMPLETED', 'FAILED', 'CANCELLED']:
                 break
         time.sleep(10)
 
